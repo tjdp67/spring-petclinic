@@ -6,7 +6,9 @@ COPY . .
 
 RUN ./mvnw package
 
-COPY ./target/spring-petclinic*.jar app.jar
+RUN ls -la
+COPY ./target/spring-petclinic-3.4.0-SNAPSHOT.jar app.jar
+RUN ls -la
 
 EXPOSE 8080
 
