@@ -6,10 +6,8 @@ COPY . .
 
 RUN ./mvnw package
 
-RUN ls -la
-COPY ./target/spring-petclinic-3.4.0-SNAPSHOT.jar app.jar
-RUN ls -la
+RUN tree -d
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "target/spring-petclinic-3.4.0-SNAPSHOT.jar"]
