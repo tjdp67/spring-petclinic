@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git 'https://github.com/tjdp67/spring-petclinic.git'
                 sh "mvnw package"
             }
         }
